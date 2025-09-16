@@ -1,8 +1,8 @@
-
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,50 +15,62 @@
             background-color: #FDF7E4;
             color: #4A4A4A;
         }
+
         .bg-ivend-orange {
             background-color: #F97300;
         }
+
         .text-ivend-orange {
             color: #F97300;
         }
+
         .border-ivend-orange {
             border-color: #F97300;
         }
+
         .header-logo {
             font-size: 3rem;
             font-weight: 700;
             color: #F97300;
             letter-spacing: -2px;
         }
+
         .hero-section {
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F97300' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .product-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
         }
+
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
         .product-card .p-6 {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
+
         .product-card ul {
             flex-grow: 1;
         }
+
         /* Modal styles */
         .modal-overlay {
             transition: opacity 0.3s ease;
         }
+
         .modal-content {
             transition: transform 0.3s ease;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -72,10 +84,15 @@
                     <a href="#home" class="text-gray-600 hover:text-ivend-orange transition-colors">Home</a>
                     <a href="#products" class="text-gray-600 hover:text-ivend-orange transition-colors">Products</a>
                     <a href="#about" class="text-gray-600 hover:text-ivend-orange transition-colors">About Us</a>
-                    <a href="#contact" class="bg-ivend-orange text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Contact</a>
+                    <a href="#contact"
+                        class="bg-ivend-orange text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Contact</a>
                 </nav>
                 <button class="md:hidden text-gray-700" id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -84,7 +101,8 @@
             <a href="#home" class="block py-2 text-gray-600 hover:text-ivend-orange">Home</a>
             <a href="#products" class="block py-2 text-gray-600 hover:text-ivend-orange">Products</a>
             <a href="#about" class="block py-2 text-gray-600 hover:text-ivend-orange">About Us</a>
-            <a href="#contact" class="block mt-2 bg-ivend-orange text-white text-center px-4 py-2 rounded-lg hover:opacity-90">Contact</a>
+            <a href="#contact"
+                class="block mt-2 bg-ivend-orange text-white text-center px-4 py-2 rounded-lg hover:opacity-90">Contact</a>
         </div>
     </header>
 
@@ -92,8 +110,11 @@
     <section id="home" class="hero-section py-20 md:py-32">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-ivend-orange leading-tight">Innovative Vending Solutions</h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">tap.vend.go - High-quality, reliable, and fully customizable vending machines to elevate your brand presence anywhere.</p>
-            <a href="#products" class="mt-8 inline-block bg-ivend-orange text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity">Explore Our Products</a>
+            <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">tap.vend.go - High-quality, reliable, and
+                fully customizable vending machines to elevate your brand presence anywhere.</p>
+            <a href="#products"
+                class="mt-8 inline-block bg-ivend-orange text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity">Explore
+                Our Products</a>
         </div>
     </section>
 
@@ -105,7 +126,8 @@
 
                 <!-- Product Card: Snacks Vending Machine -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="{% static 'images/snacks_vending_machine.png' %}" alt="Snacks Vending Machine" class="w-full h-56 object-contain">
+                    <img src="{% static 'images/snacks_vending_machine.png' %}" alt="Snacks Vending Machine"
+                        class="w-full h-56 object-contain">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Snacks Vending Machine</h3>
                         <ul class="space-y-2 text-gray-600 mb-6">
@@ -115,20 +137,25 @@
                             <li><span class="font-semibold">Payment:</span> Card, Cash, RFID</li>
                             <li><span class="font-semibold">Features:</span> Elevator System, Spiral & Belt Trays</li>
                         </ul>
-                        <button class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors" data-product="Snacks Vending Machine">✨ Get Stocking Ideas</button>
+                        <button
+                            class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors"
+                            data-product="Snacks Vending Machine">✨ Get Stocking Ideas</button>
                     </div>
                 </div>
 
                 <!-- Product Card: RVM-GO GREEN -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="{% static 'images/rvm_go_green.png' %}" alt="RVM-GO GREEN" class="w-full h-56 object-contain">
+                    <img src="{% static 'images/rvm_go_green.png' %}" alt="RVM-GO GREEN"
+                        class="w-full h-56 object-contain">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">RVM-GO GREEN</h3>
                         <ul class="space-y-2 text-gray-600">
                             <li><span class="font-semibold">Function:</span> Sorting 3 types (Cans, Plastic, Other)</li>
                             <li><span class="font-semibold">Display:</span> 7-inch Android touch display</li>
-                            <li><span class="font-semibold">Reverse Methods:</span> Mobile credit, vouchers, InstaPay</li>
-                             <li><span class="font-semibold">Management:</span> Cloud system for real-time monitoring</li>
+                            <li><span class="font-semibold">Reverse Methods:</span> Mobile credit, vouchers, InstaPay
+                            </li>
+                            <li><span class="font-semibold">Management:</span> Cloud system for real-time monitoring
+                            </li>
                             <li><span class="font-semibold">Motto:</span> RECLAIM THE FUTURE</li>
                         </ul>
                     </div>
@@ -136,7 +163,8 @@
 
                 <!-- Product Card: Stand-Alone Coffee Vending Machine -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="{% static 'images/stand_alone_coffee.png' %}" alt="Stand-Alone Coffee Vending Machine"  class="w-full h-56 object-contain">
+                    <img src="{% static 'images/stand_alone_coffee.png' %}" alt="Stand-Alone Coffee Vending Machine"
+                        class="w-full h-56 object-contain">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Stand-Alone Coffee Vending Machine</h3>
                         <ul class="space-y-2 text-gray-600 mb-6">
@@ -144,31 +172,38 @@
                             <li><span class="font-semibold">Beverages:</span> 20 hot instant & 4 cooled drinks</li>
                             <li><span class="font-semibold">Features:</span> IoT management, Touchless function</li>
                             <li><span class="font-semibold">Cleaning:</span> Self-automatic cleaning</li>
-                             <li><span class="font-semibold">Capacity:</span> Commercial use, high capacity</li>
+                            <li><span class="font-semibold">Capacity:</span> Commercial use, high capacity</li>
                         </ul>
-                        <button class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors" data-product="Stand-Alone Coffee Vending Machine">✨ Get Drink Menu Ideas</button>
+                        <button
+                            class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors"
+                            data-product="Stand-Alone Coffee Vending Machine">✨ Get Drink Menu Ideas</button>
                     </div>
                 </div>
-                
+
                 <!-- Product Card: Beans Table Top Coffee Vending Machine V1 -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="{% static 'images/table_top_coffee_v1.png' %}" alt="Beans Table Top Coffee Vending Machine V1" class="w-full h-56 object-contain">
+                    <img src="{% static 'images/table_top_coffee_v1.png' %}"
+                        alt="Beans Table Top Coffee Vending Machine V1" class="w-full h-56 object-contain">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Beans Table Top Coffee Machine V1</h3>
                         <ul class="space-y-2 text-gray-600 mb-6">
                             <li><span class="font-semibold">Display:</span> 15.6-inch Android touch display</li>
                             <li><span class="font-semibold">Beverages:</span> 6 hot instant drinks</li>
                             <li><span class="font-semibold">Connectivity:</span> USB, RFID, WIFI</li>
-                            <li><span class="font-semibold">Management:</span> Cloud system for real-time monitoring</li>
+                            <li><span class="font-semibold">Management:</span> Cloud system for real-time monitoring
+                            </li>
                             <li><span class="font-semibold">Bean Hopper:</span> 2.7 liters</li>
                         </ul>
-                        <button class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors" data-product="Beans Table Top Coffee Machine V1">✨ Get Drink Menu Ideas</button>
+                        <button
+                            class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors"
+                            data-product="Beans Table Top Coffee Machine V1">✨ Get Drink Menu Ideas</button>
                     </div>
                 </div>
 
                 <!-- Product Card: Beans Table Top Coffee Vending Machine V2 -->
                 <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                    <img src="{% static 'images/table_top_coffee_v2.png' %}" alt="Beans Table Top Coffee Vending Machine V2" class="w-full h-56 object-contain">
+                    <img src="{% static 'images/table_top_coffee_v2.png' %}"
+                        alt="Beans Table Top Coffee Vending Machine V2" class="w-full h-56 object-contain">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-3">Beans Table Top Coffee Machine V2</h3>
                         <ul class="space-y-2 text-gray-600 mb-6">
@@ -178,7 +213,9 @@
                             <li><span class="font-semibold">Water Temp:</span> Up to 98° for hot drinks</li>
                             <li><span class="font-semibold">Design:</span> Sleek, modern full metal shell</li>
                         </ul>
-                         <button class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors" data-product="Beans Table Top Coffee Machine V2">✨ Get Drink Menu Ideas</button>
+                        <button
+                            class="gemini-feature-btn mt-auto w-full bg-ivend-orange/10 text-ivend-orange font-semibold py-2 px-4 rounded-lg border-2 border-ivend-orange/30 hover:bg-ivend-orange/20 transition-colors"
+                            data-product="Beans Table Top Coffee Machine V2">✨ Get Drink Menu Ideas</button>
                     </div>
                 </div>
 
@@ -196,10 +233,15 @@
                 <div class="md:w-1/2 md:pl-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">About Ivend</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        Ivend, a 100% Egyptian brand and proud subsidiary of Mobica, leverages over 45 years of trusted manufacturing expertise to deliver high-quality, reliable vending machines. Our extensive product range includes beverage units, snack dispensers, coffee machines, and reverse vending machines—each fully customizable in design, branding, and functionality.
+                        Ivend, a 100% Egyptian brand and proud subsidiary of Mobica, leverages over 45 years of trusted
+                        manufacturing expertise to deliver high-quality, reliable vending machines. Our extensive
+                        product range includes beverage units, snack dispensers, coffee machines, and reverse vending
+                        machines—each fully customizable in design, branding, and functionality.
                     </p>
                     <p class="text-gray-700 leading-relaxed">
-                        Beyond these, we offer tailored vending solutions for a variety of sectors, including fashion, electronics, personal care, and more, ensuring that businesses can provide seamless, on-the-go experiences while maintaining a strong brand presence in any environment.
+                        Beyond these, we offer tailored vending solutions for a variety of sectors, including fashion,
+                        electronics, personal care, and more, ensuring that businesses can provide seamless, on-the-go
+                        experiences while maintaining a strong brand presence in any environment.
                     </p>
                 </div>
             </div>
@@ -214,8 +256,10 @@
                 <!-- Left Column: Contact Info -->
                 <div class="text-center md:text-left">
                     <h2 class="text-3xl font-bold mb-4">Ready to elevate your business?</h2>
-                    <p class="text-gray-300 mb-8">Contact us today for a custom vending solution. Reach out via email or use the form to send us a message directly.</p>
-                    <a href="mailto:contact@ivend.com" class="bg-ivend-orange text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block">contact@ivend.com</a>
+                    <p class="text-gray-300 mb-8">Contact us today for a custom vending solution. Reach out via email or
+                        use the form to send us a message directly.</p>
+                    <a href="mailto:contact@ivend.com"
+                        class="bg-ivend-orange text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-opacity inline-block">contact@ivend.com</a>
                 </div>
 
                 <!-- Right Column: Contact Form -->
@@ -224,22 +268,32 @@
                         {% csrf_token %}
                         <div>
                             <label for="name" class="sr-only">Full Name</label>
-                            <input type="text" name="name" id="name" autocomplete="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange" placeholder="Full Name" required>
+                            <input type="text" name="name" id="name" autocomplete="name"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange"
+                                placeholder="Full Name" required>
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email Address</label>
-                            <input type="email" name="email" id="email" autocomplete="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange" placeholder="Email Address" required>
+                            <input type="email" name="email" id="email" autocomplete="email"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange"
+                                placeholder="Email Address" required>
                         </div>
                         <div>
                             <label for="phone" class="sr-only">Phone Number</label>
-                            <input type="tel" name="phone" id="phone" autocomplete="tel" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange" placeholder="Phone Number" required>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange"
+                                placeholder="Phone Number" required>
                         </div>
                         <div>
                             <label for="message" class="sr-only">Your Message</label>
-                            <textarea name="message" id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange" placeholder="Your Message" required></textarea>
+                            <textarea name="message" id="message" rows="4"
+                                class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-ivend-orange"
+                                placeholder="Your Message" required></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-ivend-orange text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">Send Message</button>
+                            <button type="submit"
+                                class="w-full bg-ivend-orange text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">Send
+                                Message</button>
                         </div>
                     </form>
                 </div>
@@ -247,26 +301,32 @@
 
             <!-- Social Links & Copyright -->
             <div class="mt-16 text-center">
-                 <div class="flex justify-center space-x-6">
+                <div class="flex justify-center space-x-6">
                     <!-- Facebook -->
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <span class="sr-only">Facebook</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
                         </svg>
                     </a>
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/i.vend/" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://www.instagram.com/i.vend/"
+                        class="text-gray-400 hover:text-white transition-colors">
                         <span class="sr-only">Instagram</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 8.118a4.132 4.132 0 100 8.264 4.132 4.132 0 000-8.264zm0 6.802a2.67 2.67 0 110-5.34 2.67 2.67 0 010 5.34zM20.93 5.572a1.448 1.448 0 10-2.898 0 1.448 1.448 0 002.898 0z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 8.118a4.132 4.132 0 100 8.264 4.132 4.132 0 000-8.264zm0 6.802a2.67 2.67 0 110-5.34 2.67 2.67 0 010 5.34zM20.93 5.572a1.448 1.448 0 10-2.898 0 1.448 1.448 0 002.898 0z"
+                                clip-rule="evenodd" />
                         </svg>
                     </a>
                     <!-- LinkedIn -->
-                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <span class="sr-only">LinkedIn</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                     </a>
                 </div>
@@ -280,25 +340,34 @@
     </footer>
 
     <!-- Gemini AI Modal -->
-    <div id="gemini-modal" class="modal-overlay fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden opacity-0">
+    <div id="gemini-modal"
+        class="modal-overlay fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden opacity-0">
         <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-2xl p-6 md:p-8 transform scale-95">
             <div class="flex justify-between items-center mb-4">
                 <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
                 <button id="modal-close-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
             </div>
             <div id="modal-body">
-                <p class="text-gray-600 mb-4">Tell us where your vending machine will be located, and our AI will suggest the perfect items to stock!</p>
+                <p class="text-gray-600 mb-4">Tell us where your vending machine will be located, and our AI will
+                    suggest the perfect items to stock!</p>
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <input type="text" id="location-input" placeholder="e.g., University Campus, Corporate Office, Gym" class="flex-grow w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ivend-orange">
-                    <button id="generate-btn" class="w-full sm:w-auto bg-ivend-orange text-white font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center">
+                    <input type="text" id="location-input" placeholder="e.g., University Campus, Corporate Office, Gym"
+                        class="flex-grow w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ivend-orange">
+                    <button id="generate-btn"
+                        class="w-full sm:w-auto bg-ivend-orange text-white font-semibold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center">
                         <span id="generate-btn-text">Generate Ideas</span>
-                        <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
                         </svg>
                     </button>
                 </div>
-                <div id="gemini-result" class="mt-6 p-4 bg-gray-50 rounded-lg min-h-[150px] max-h-64 overflow-y-auto border">
+                <div id="gemini-result"
+                    class="mt-6 p-4 bg-gray-50 rounded-lg min-h-[150px] max-h-64 overflow-y-auto border">
                     <p class="text-gray-500">Your AI-powered suggestions will appear here...</p>
                 </div>
                 <div id="error-message" class="text-red-500 mt-2"></div>
@@ -341,7 +410,7 @@
         const loadingSpinner = document.getElementById('loading-spinner');
         const geminiResult = document.getElementById('gemini-result');
         const errorMessage = document.getElementById('error-message');
-        
+
         let currentProduct = '';
 
         document.querySelectorAll('.gemini-feature-btn').forEach(button => {
@@ -413,7 +482,7 @@
                 return `You are a vending machine expert for the Egyptian market. The "${productName}" is located in a "${location}". This machine can vend items smaller than 75cm wide and 25cm high. Provide a list of 15 recommended products to stock. Include a creative popular local Egyptian snacks/drinks or international snacks/drinks or personal cosmetics or small toys that would sell well in ${location} and make the products from the location or could be found in this location in normal. Format the response as a simple, unordered list (using hyphens). Do not add a title or introductory sentence.`;
             }
         }
-        
+
         function formatResponse(text) {
             return '<ul>' + text.split('\n').map(line => {
                 line = line.trim();
@@ -436,41 +505,51 @@
             }
         }
 
+        function getCSRFToken() {
+            const m = document.cookie.match(/(?:^|;)\s*csrftoken=([^;]+)/);
+            return m ? decodeURIComponent(m[1]) : "";
+        }
+
         async function callGeminiAPI(prompt, retries = 3, delay = 1000) {
-            // The API key is now safely injected by your Django backend.
-            const apiKey = "{{ GEMINI_API_KEY|escapejs }}";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-            const payload = {
-                contents: [{ parts: [{ text: prompt }] }],
-            };
+            const body = JSON.stringify({ prompt });
 
             for (let i = 0; i < retries; i++) {
                 try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
+                    const controller = new AbortController();
+                    const timeout = setTimeout(() => controller.abort(), 30000); // 30s timeout
+
+                    const res = await fetch("/gemini/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": getCSRFToken(),
+                        },
+                        body,
+                        signal: controller.signal,
                     });
 
-                    if (!response.ok) {
-                        throw new Error(`API responded with status: ${response.status}`);
-                    }
+                    clearTimeout(timeout);
 
-                    const result = await response.json();
-                    const candidate = result.candidates?.[0];
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    const data = await res.json();
 
-                    if (candidate && candidate.content?.parts?.[0]?.text) {
-                        return candidate.content.parts[0].text;
-                    } else {
-                        throw new Error("Invalid response structure from API.");
-                    }
-                } catch (error) {
-                    if (i === retries - 1) throw error; // Last retry failed, throw error
-                    await new Promise(res => setTimeout(res, delay * Math.pow(2, i))); // Exponential backoff
+                    // Prefer normalized 'text' from backend, but fallback just in case
+                    const text =
+                        data.text ??
+                        data.candidates?.[0]?.content?.parts?.[0]?.text ??
+                        null;
+
+                    if (!text) throw new Error("Invalid response structure from API.");
+                    return text;
+                } catch (err) {
+                    if (i === retries - 1) throw err;
+                    await new Promise(r => setTimeout(r, delay * (2 ** i))); // exponential backoff
                 }
             }
         }
+    </script>
 
     </script>
 </body>
+
 </html>

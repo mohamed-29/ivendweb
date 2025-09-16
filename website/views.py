@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import redirect
+from django_ratelimit.decorators import ratelimit
 import json
+import requests
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
+from django.http import HttpResponseBadRequest
 
 import telebot
 from telethon.sync import TelegramClient
@@ -65,3 +70,45 @@ def index(request):
         'GEMINI_API_KEY': settings.GEMINI_API_KEY
     }
     return render(request, 'index.html', context)
+
+@csrf_exempt
+@ratelimit(key='user_or_ip', rate='5/m', block=True)     # 5 requests/minute
+@ratelimit(key='user_or_ip', rate='100/d', block=True)   # 100/day
+@require_POST
+def gemini_proxy(request):
+    try:
+        payload = json.loads(request.body.decode("utf-8"))
+    except json.JSONDecodeError:
+        return HttpResponseBadRequest("Invalid JSON body")
+
+    prompt = payload.get("prompt")
+    if not prompt:
+        return HttpResponseBadRequest("Missing 'prompt'")
+
+    url = (
+        "https://generativelanguage.googleapis.com/v1beta/"
+        "models/gemini-2.5-flash-preview-05-20:generateContent"
+        f"?key={settings.GEMINI_API_KEY}"
+    )
+    body = {"contents": [{"parts": [{"text": prompt}]}]}
+
+    try:
+        r = requests.post(url, json=body, timeout=30)
+        r.raise_for_status()
+    except requests.RequestException as e:
+        return JsonResponse({"error": str(e)}, status=502)
+
+    j = r.json()
+    # Normalize response to a simple {text: "..."} for the frontend
+    text = (
+        j.get("candidates", [{}])[0]
+         .get("content", {})
+         .get("parts", [{}])[0]
+         .get("text")
+    )
+
+    if not text:
+        # Surface model safety blocks / errors if present
+        return JsonResponse({"error": "No text in response", "raw": j}, status=502)
+
+    return JsonResponse({"text": text})
